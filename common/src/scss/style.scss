@@ -5,6 +5,7 @@
     //----------------------------------------------------------------//
     "02-bootstrap-extends/function-strip-unit",    // Convert PX units to REM
     "02-bootstrap-extends/mixin-calcrem",          // Convert PX units to REM
+    "02-bootstrap-extends/mixin-responsive-typo",
     "03-bootstrap-overrides/variables",
     
     //----------------------------------------------------------------//
@@ -25,13 +26,13 @@
     "01-bootstrap/root",
     "01-bootstrap/reboot",
     "01-bootstrap/type",    // to enable responsive typography, uncomment the next line for `03-bootstrap-overrides/type`
-    // "03-bootstrap-overrides/type",
+    "03-bootstrap-overrides/type",
     "01-bootstrap/images",
     //"01-bootstrap/code",
     "01-bootstrap/grid",
     // "01-bootstrap/tables",
     // "01-bootstrap/forms",
-    // "01-bootstrap/buttons",
+    "01-bootstrap/buttons",
     // "01-bootstrap/transitions",
     // "01-bootstrap/dropdown",
     // "03-bootstrap-overrides/dropdown",
@@ -67,22 +68,24 @@
     //  04. CUSTOM BASE
     //----------------------------------------------------------------//
     "04-custom-base/font-face",
+    "04-custom-base/footer",
+    "04-custom-base/typography",
     //----------------------------------------------------------------//
     //  05. CUSTOM UTILITY CLASSES 
     //----------------------------------------------------------------//
-    "05-utility/borders",
-    "05-utility/collapse",
-    "05-utility/color",
-    "05-utility/cursor",
-    "05-utility/image",
-    "05-utility/max-width",
-    "05-utility/object-fit",
-    "05-utility/overflow",
-    "05-utility/positioning"
+    "05-utility/text-shadow",
     //----------------------------------------------------------------//
     //  06. ATOMS 
     //----------------------------------------------------------------//
-
+    "06-atoms/backgrounds",
+    "06-atoms/hero",
+    "06-atoms/angles",
+    "06-atoms/donate",
+    "06-atoms/visit",
+    "06-atoms/education",
+    "06-atoms/plan",
+    "06-atoms/business",
+    "06-atoms/animals"
     //----------------------------------------------------------------//
     //  07. ORGANISMS
     //----------------------------------------------------------------//

@@ -1,0 +1,25 @@
+.hero {
+    font-family: "Open Sans Condensed", sans-serif;
+    min-height: 300px;
+    @include media-breakpoint-up(lg) {
+        min-height: 637px;
+    }
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.hero-inner {
+    padding: 50px 15px 50px 15px;
+    flex-basis: 65%;
+    @include media-breakpoint-up(lg) {
+        padding: 100px 150px 150px 0;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1400px) {
+        flex-basis: 40%;
+    }
+}

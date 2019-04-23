@@ -165,10 +165,9 @@ var jsBundles = {
     //          and output to individually in your dist scripts folder
     //----------------------------------------------------------------//
     "footer": [ 
-        filePath.js.src + "/vendor/modernizr.min.js",
+        //filePath.js.src + "/vendor/modernizr.min.js",
         filePath.js.src + "/vendor/jquery-3.3.1.min.js",
-        filePath.js.src + "/vendor/smartresize.js",
-        filePath.js.src + "/vendor/bootstrap/bootstrap.bundle.min.js",
+        //filePath.js.src + "/vendor/bootstrap/bootstrap.bundle.min.js",
         // filePath.js.src + "/vendor/picturefill.min.js",
         // filePath.js.src + "/vendor/slick.min.js",
         // filePath.js.src + "/vendor/lazyload.min.js",
@@ -206,7 +205,7 @@ gulp.task('process-css', function() {
     .pipe(sass().on('error', sass.logError))
 	.pipe(postcss(plugins))
     .pipe(gulp.dest(filePath.styles.dist))
-	//.pipe(browserSync.stream());
+	.pipe(browserSync.stream());
 });
 //--------------------------------------------------------------------//
 //      b.  Process JavaScript
@@ -218,7 +217,7 @@ gulp.task('process-header-scripts', function () {
     .pipe(concat('header.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(filePath.js.dist))
-    //.pipe(browserSync.stream());
+    .pipe(browserSync.stream());
 });
 //--------------------------------------------------------------------//
 //          2.  Bundle and Minify Footer Scripts
@@ -228,7 +227,7 @@ gulp.task('process-footer-scripts', function () {
         .pipe(concat('footer.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(filePath.js.dist))
-        //.pipe(browserSync.stream());
+        .pipe(browserSync.stream());
 });
 //--------------------------------------------------------------------//
 //          2b.  Minify page specific scripts and copy to Dist
@@ -237,7 +236,7 @@ gulp.task('process-page-scripts', function () {
     return gulp.src(filePath.js.pageScriptSrc + '/*.js')
         .pipe(uglify())
         .pipe(gulp.dest(filePath.js.dist + '/page'))
-        //.pipe(browserSync.stream());
+        .pipe(browserSync.stream());
 });
 //--------------------------------------------------------------------//
 //          3. Process Header and Footer Scripts
@@ -278,12 +277,12 @@ gulp.task('copy-fonts', function() {
 //--------------------------------------------------------------------//
 //      g.  Default Task
 //--------------------------------------------------------------------//
-gulp.task('default', ['watch']);
+gulp.task('default', ['browserSync', 'watch']);
 //--------------------------------------------------------------------//
 //      h.  Browser Sync
 //--------------------------------------------------------------------//
 gulp.task('browserSync', ['build'], function() {
-    /* console.log('-------------------------------------');
+    console.log('-------------------------------------');
     console.log('Create Local Server and Watch Files');
     console.log('-------------------------------------');
     var serverType = localServerSettings.serverType;
@@ -305,19 +304,19 @@ gulp.task('browserSync', ['build'], function() {
         });
     } else {
         console.log('Server type undefined or incorrect in `localServerType` key within localServerSettings` object, please choose `static` or `dynamic` ');
-    } */
+    }
 });
 //--------------------------------------------------------------------//
 //      h.  File Watching
 //--------------------------------------------------------------------//
-gulp.task('watch', function () {
+gulp.task('watch', ['browserSync'], function () {
     gulp.watch(filePath.styles.src + '/**/*.scss', { interval: 1000 }, ['process-css']);
 	//gulp.watch(jsBundles.header, { interval: 1000 }, ['process-header-scripts']);
     gulp.watch(jsBundles.footer, { interval: 1000 }, ['process-footer-scripts']);
 	gulp.watch(filePath.js.pageScriptSrc, { interval: 1000 }, ['process-page-scripts']);
 	gulp.watch(filePath.image.src + '/**/*.{png,jpg,svg,gif}', { interval: 1000 }, ['optimize-images']);
     gulp.watch(filePath.font.src, { interval: 1000 }, ['copy-fonts']);
-    gulp.watch('../**/*.{html,ascx,aspx,cshtml}', { interval: 1000 }, ['reload-markup']);
+    //gulp.watch('../**/*.{html,ascx,aspx,cshtml}', { interval: 1000 }, ['reload-markup']);
     // gulp.watch('../**/*.css', { interval: 1000 }, ['reload-css']);
 });
 //--------------------------------------------------------------------//

@@ -1,0 +1,6 @@
+.plan {
+    min-height: 350px;
+    @include media-breakpoint-up(md) {
+        min-height: 450px;
+    }
+}

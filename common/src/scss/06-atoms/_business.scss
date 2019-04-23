@@ -1,0 +1,6 @@
+.business {
+    padding-bottom: 50px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 120px;
+    }
+}

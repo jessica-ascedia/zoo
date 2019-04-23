@@ -1,0 +1,53 @@
+@keyframes slideup {
+    from {
+        background-position: 0 1000px;
+    }
+  
+    to {
+        background-position: 0 0;
+    }
+  }
+
+.giraffe {
+    width: 250px;
+    background-image: url(/common/dist/images/giraffe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: 0 -1000px;
+    z-index: 2;
+    top: -40%;
+    height: 180%;
+    &.animate {
+        background-position: 0 0;
+        animation-duration: 1s;
+        animation-name: slideup;
+    }
+}
+
+.giraffe-container {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.tiger {
+    width: 366px;
+    height: 190%;
+    background-image: url(/common/dist/images/tiger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 -1000px;
+    position: absolute;
+    z-index: 2;
+    top: -40%;
+    &.animate {
+        background-position: 0 0;
+        animation-duration: 1s;
+        animation-name: slideup;
+    }
+}
+
+.tiger-container {
+    width: 366px;
+    flex-shrink: 0;
+}

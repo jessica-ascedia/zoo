@@ -1,0 +1,54 @@
+.bg-image-sealion {
+    background-image: url(/common/dist/images/sealion.jpg);
+    background-size: cover;
+    background-position: top right;
+    position: relative;
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        //left: 0;
+        right: 0;
+        border: 100vw solid transparent;
+        border-right-width: 0;
+        border-top-width: 0;
+        border-bottom-width: 45px;
+        border-left-color: #fff;
+        height: 0;
+        width: 100%;
+
+    }
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        //left: 0;
+        border: 100vw solid transparent;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-top-width: 45px;
+        border-left-color: #fff;
+        height: 0;
+        width: 100%;
+    }
+    @include media-breakpoint-up(lg) {
+        &::before {
+            border-bottom-width: 90px;
+        }
+        &::after {
+            border-top-width: 90px;
+        }
+    }
+}
+
+.bg-image-flamingo {
+    background-image: url(/common/dist/images/flamingo.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    padding-top: 45px;
+    top: -45px;
+    margin-bottom: -45px;
+    z-index: 3;
+}
