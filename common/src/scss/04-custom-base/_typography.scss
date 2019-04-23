@@ -1,0 +1,21 @@
+h1, .h1,
+h2, .h2,  
+h3, .h3,  
+h4, .h4,  
+h5, .h5,  
+h6, .h6 {
+    font-weight: $headings-font-weight; 
+    text-transform: uppercase;
+}
+
+.card-body a {
+    color: $body-color;
+}
+.card-body h3 {
+    @include font-size(16, 16);
+    text-transform: captialize;
+}
+
+body {
+    color: $body-color
+}

@@ -1,0 +1,35 @@
+//--------------------------------------------------------------------//
+//
+//  Vertically and horizontally center an element
+//
+//--------------------------------------------------------------------//
+.xy-center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+//--------------------------------------------------------------------//
+//      a.  Breakpoint based classes
+//          Usage: `<div class="xy-{breakpoint}-center">...</div>`
+//--------------------------------------------------------------------//
+@each $breakpoint in map-keys($grid-breakpoints) {
+    .xy-#{$breakpoint}-center {
+        @include media-breakpoint-up($breakpoint) {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+}
+
+// Horizontal sticky
+.position-sticky {
+    position: sticky;
+    &.left {
+        left: 0;
+    }
+}

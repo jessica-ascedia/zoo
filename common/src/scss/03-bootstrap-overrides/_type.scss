@@ -1,0 +1,11 @@
+// ADD RESPONSIVE TYPOGRAPHY SIZING
+h1, .h1 { @include font-size(28, 48) }
+h2, .h2 { @include font-size(24, 36) }
+h3, .h3 { @include font-size(24, 48) }
+h4, .h4 { @include font-size(24, 48) }
+h5, .h5 { @include font-size(24, 48) }
+h6, .h6 { @include font-size(24, 48) }
+
+body {
+    @include font-size(12,16);
+}

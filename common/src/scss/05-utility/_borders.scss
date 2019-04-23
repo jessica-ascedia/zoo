@@ -1,0 +1,16 @@
+$enable-responsive-border-classes: false;
+
+@if $enable-responsive-border-classes == true {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            .border-#{$breakpoint}         { border: $border-width solid $border-color; }
+            .border-#{$breakpoint}-top     { border-top: $border-width solid $border-color; }
+            .border-#{$breakpoint}-right   { border-right: $border-width solid $border-color; }
+            .border-#{$breakpoint}-bottom  { border-bottom: $border-width solid $border-color; }
+            .border-#{$breakpoint}-left    { border-left: $border-width solid $border-color; }
+        }
+    };
+};
+
+
+

@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import
+    //----------------------------------------------------------------//
+    // 01. CUSTOM FUNCTIONS, MIXINS, VARIABLE OVERRIDES
+    //----------------------------------------------------------------//
+    "02-bootstrap-extends/function-strip-unit",    // Convert PX units to REM
+    "02-bootstrap-extends/mixin-calcrem",          // Convert PX units to REM
+    "03-bootstrap-overrides/variables",
+    
+    //----------------------------------------------------------------//
+    //  02. BOOTSTRAP CORE STYLES
+    //----------------------------------------------------------------//
+    "01-bootstrap/functions",
+    "01-bootstrap/variables",
+    "01-bootstrap/mixins";
+
+//--------------------------------------------------------------------//
+//  Remove unused Bootstrap colors to save on css file size (~3k/color)
+//  •   This is the BS recommended way of doing this
+//--------------------------------------------------------------------//
+// $theme-colors: map-remove($theme-colors, "success", "info", "warning", "light", "dark");
+// $colors: map-remove($colors, "blue", "indigo", "purple", "pink", "orange", "yellow", "green", "teal", "cyan");
+
+@import
+    "01-bootstrap/root",
+    "01-bootstrap/reboot",
+    "01-bootstrap/type",    // to enable responsive typography, uncomment the next line for `03-bootstrap-overrides/type`
+    // "03-bootstrap-overrides/type",
+    "01-bootstrap/images",
+    //"01-bootstrap/code",
+    "01-bootstrap/grid",
+    // "01-bootstrap/tables",
+    // "01-bootstrap/forms",
+    // "01-bootstrap/buttons",
+    // "01-bootstrap/transitions",
+    // "01-bootstrap/dropdown",
+    // "03-bootstrap-overrides/dropdown",
+    // "01-bootstrap/button-group",
+    // "01-bootstrap/input-group",
+    // "01-bootstrap/custom-forms",
+    // "03-bootstrap-overrides/custom-forms",
+    // "01-bootstrap/nav",
+    // "01-bootstrap/navbar",
+    // "01-bootstrap/card",
+    // "01-bootstrap/breadcrumb",
+    // "01-bootstrap/pagination",
+    // "01-bootstrap/badge",
+    // "01-bootstrap/jumbotron",
+    // "01-bootstrap/alert",
+    // "01-bootstrap/progress",
+    // "01-bootstrap/media",
+    // "01-bootstrap/list-group",
+    // "01-bootstrap/close",
+    // "01-bootstrap/modal", 
+    // "01-bootstrap/tooltip",
+    // "01-bootstrap/popover",
+    // "01-bootstrap/carousel",
+    "01-bootstrap/utilities",
+    "01-bootstrap/print",
+    //----------------------------------------------------------------//
+    //  03. BOOTSTRAP EXTENDS
+    //      •   Custom extensions to Bootstrap's core
+    //      •   These will most likely be added in section 01  
+    //----------------------------------------------------------------//
+    // 
+    //----------------------------------------------------------------//
+    //  04. CUSTOM BASE
+    //----------------------------------------------------------------//
+    "04-custom-base/font-face",
+    //----------------------------------------------------------------//
+    //  05. CUSTOM UTILITY CLASSES 
+    //----------------------------------------------------------------//
+    "05-utility/borders",
+    "05-utility/collapse",
+    "05-utility/color",
+    "05-utility/cursor",
+    "05-utility/image",
+    "05-utility/max-width",
+    "05-utility/object-fit",
+    "05-utility/overflow",
+    "05-utility/positioning"
+    //----------------------------------------------------------------//
+    //  06. ATOMS 
+    //----------------------------------------------------------------//
+
+    //----------------------------------------------------------------//
+    //  07. ORGANISMS
+    //----------------------------------------------------------------//
+
+    //----------------------------------------------------------------//
+    //  08. VENDOR
+    //----------------------------------------------------------------//
+;

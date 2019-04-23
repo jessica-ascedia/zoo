@@ -1,0 +1,27 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "main": ".npm-init.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "8.6.3",
+    "browser-sync": "2.24.5",
+    "cssnano": "3.10.0",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-changed": "3.2.0",
+    "gulp-concat": "2.6.1",
+    "gulp-image": "4.3.0",
+    "gulp-postcss": "7.0.1",
+    "gulp-sass": "4.0.1",
+    "gulp-uglify": "3.0.1",
+    "run-sequence": "2.2.1",
+    "uglify-es": "3.3.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

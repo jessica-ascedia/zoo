@@ -1,0 +1,20 @@
+// Variables
+$enable-responsive-mw-classes:  false !default;
+
+@each $prop, $abbrev in (width: w) {
+    @each $size, $length in $sizes {
+        .m#{$abbrev}-#{$size} { max-#{$prop}: $length; }
+    }
+    @if $enable-responsive-mw-classes == true {
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            @each $size, $length in $sizes {
+                
+                @include media-breakpoint-up($breakpoint) {
+                    .m#{$abbrev}-#{$breakpoint}-#{$size} { 
+                        max-#{$prop}: $length ;
+                    } 
+                }
+            }
+        }
+    }
+} 
